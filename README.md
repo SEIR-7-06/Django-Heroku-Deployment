@@ -133,7 +133,7 @@ Once that is completed we need to migrate our database just as we would on our o
 INSIDE THE HEROKU CONSOLE RUN
 
 ```
-$ python3 manage.py makemigrates
+$ python3 manage.py makemigrations
 
 ```
 
