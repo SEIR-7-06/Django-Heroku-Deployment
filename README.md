@@ -128,7 +128,14 @@ $ git push heroku master
 
 ```
 
-Once that is completed we need to migrate our database just as we would on our own devices. 
+Once that is completed we need to migrate our database just as we would on our own devices.
+
+OPEN THE HEROKU CONSOLE
+
+```
+$ heroku run bash
+
+```
 
 INSIDE THE HEROKU CONSOLE RUN
 
@@ -139,6 +146,13 @@ $ python3 manage.py makemigrations
 
 ```
 $ python3 manage.py migrate
+
+```
+
+EXIT THE HEROKU CONSOLE
+
+```
+$ exit
 
 ```
 
