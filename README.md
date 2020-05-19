@@ -79,31 +79,10 @@ import django_heroku
 //at the bottom of the file
 django_heroku.settings(locals())
 ```
-Now to install gunicorn! 
+Now to install Gunicorn and Whitenoise! 
 
 ```
 $ pip3 install gunicorn
-
-```
-
-___
-
-
-
-### Set up Static Assets
-___
-
-We need to configure the Static-related settings in settings.py. At the bottom of the file add...
-
-``` python 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-    
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, 'static'))
-
 
 ```
 
@@ -113,29 +92,10 @@ Install Whitenoise
 $ pip3 install whitenoise
 ```
 
-Add whitenoise to your Django settings.py extensions
-
-```
-MIDDLEWARE = [
-	//previous middleware
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-]
-
-```
-
-Now add to the bottom of settings.py...
-
-``` python
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-```
-
-Finally we have to add a folder for the static files to go. under your main project folder create a folder namned static.
-
 ### Update requirements.txt
 ___
 
-Create a Pipfile with the following..
+Update your existing Pipfile, or create a new Pipfile with the following command...
 
 ```
 pip3 freeze > requirements.txt
