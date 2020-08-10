@@ -60,13 +60,13 @@ python-{your version number}
 
 [Supported Python Runtimes](https://devcenter.heroku.com/articles/python-support#supported-runtimes)
 
-### Install Gunicorn and Heroku Django
+### Install Gunicorn and Django-On-Heroku
 ___
 
 In your project folder run the following..
 
 ```
-$ pip3 install django-heroku
+$ pip3 install django-on-heroku
 
 ```
 This will install the helper addons for heroku. Now we must add it into our project. 
@@ -74,10 +74,10 @@ Add to your settings.py
 
 ```
 //after import os
-import django_heroku
+import django_on_heroku
 
 //at the bottom of the file
-django_heroku.settings(locals())
+django_on_heroku.settings(locals())
 ```
 Now to install Gunicorn and Whitenoise! 
 
@@ -99,6 +99,21 @@ Update your existing Pipfile, or create a new Pipfile with the following command
 
 ```
 pip3 freeze > requirements.txt
+
+```
+
+### Git Add & Commit Changes
+___
+
+Add all Heroku config changes
+```
+git add -A
+
+```
+
+Commit changes
+```
+git commit -m "Adds heroku deployment config"
 
 ```
 
@@ -128,17 +143,31 @@ $ git push heroku master
 
 ```
 
-Once that is completed we need to migrate our database just as we would on our own devices. 
+Once that is completed we need to migrate our database just as we would on our own devices.
+
+OPEN THE HEROKU CONSOLE
+
+```
+$ heroku run bash
+
+```
 
 INSIDE THE HEROKU CONSOLE RUN
 
 ```
-$ python3 manage.py makemigrates
+$ python3 manage.py makemigrations
 
 ```
 
 ```
 $ python3 manage.py migrate
+
+```
+
+EXIT THE HEROKU CONSOLE
+
+```
+$ exit
 
 ```
 
