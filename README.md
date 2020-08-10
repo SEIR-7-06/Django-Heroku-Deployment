@@ -102,6 +102,21 @@ pip3 freeze > requirements.txt
 
 ```
 
+### Git Add & Commit Changes
+___
+
+Add all Heroku config changes
+```
+git add -A
+
+```
+
+Commit changes
+```
+git commit -m "Adds heroku deployment config"
+
+```
+
 ## Time to Deploy! 
 
 Inside your project folder run..
