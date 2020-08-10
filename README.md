@@ -60,13 +60,13 @@ python-{your version number}
 
 [Supported Python Runtimes](https://devcenter.heroku.com/articles/python-support#supported-runtimes)
 
-### Install Gunicorn and Heroku Django
+### Install Gunicorn and Django-On-Heroku
 ___
 
 In your project folder run the following..
 
 ```
-$ pip3 install django-heroku
+$ pip3 install django-on-heroku
 
 ```
 This will install the helper addons for heroku. Now we must add it into our project. 
@@ -74,10 +74,10 @@ Add to your settings.py
 
 ```
 //after import os
-import django_heroku
+import django_on_heroku
 
 //at the bottom of the file
-django_heroku.settings(locals())
+django_on_heroku.settings(locals())
 ```
 Now to install Gunicorn and Whitenoise! 
 
