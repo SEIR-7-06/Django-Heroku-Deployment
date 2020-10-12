@@ -73,7 +73,7 @@ This will install the helper addons for heroku. Now we must add it into our proj
 Add to your settings.py 
 
 ```
-//after import os
+//after import path
 import django_on_heroku
 
 //at the bottom of the file
