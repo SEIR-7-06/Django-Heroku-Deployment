@@ -72,7 +72,7 @@ $ pip3 install django-on-heroku
 This will install the helper addons for heroku. Now we must add it into our project. 
 Add to your settings.py 
 
-```
+```python
 //after import path
 import django_on_heroku
 
@@ -193,6 +193,8 @@ in settings.py
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False # change this line to false
 ```
+
+now just add, commit and push up to heroku. 
 
 Happy Coding! 
 
