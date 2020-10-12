@@ -37,7 +37,7 @@ ___
 Create a file named Procfile in the root with the following info..
 
 ```
-web: gunicorn {name of your project folder}.wsgi --log-file -
+web: gunicorn {name of your project folder}.wsgi
 ```
 
 
@@ -183,6 +183,15 @@ And viola! Your Django application is officially online! You can run the followi
 ``` bash
 $ heroku open
 
+```
+
+Once you have tested your application and everything is lookging great it's time to turn off debug mode! 
+
+in settings.py 
+
+```python
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False # change this line to false
 ```
 
 Happy Coding! 
