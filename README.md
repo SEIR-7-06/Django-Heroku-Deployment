@@ -37,7 +37,7 @@ ___
 Create a file named Procfile in the root with the following info..
 
 ```
-web: gunicorn {name of your project folder}.wsgi --log-file -
+web: gunicorn {name of your project folder}.wsgi
 ```
 
 
@@ -72,8 +72,8 @@ $ pip3 install django-on-heroku
 This will install the helper addons for heroku. Now we must add it into our project. 
 Add to your settings.py 
 
-```
-//after import os
+```python
+//after import path
 import django_on_heroku
 
 //at the bottom of the file
@@ -184,6 +184,17 @@ And viola! Your Django application is officially online! You can run the followi
 $ heroku open
 
 ```
+
+Once you have tested your application and everything is lookging great it's time to turn off debug mode! 
+
+in settings.py 
+
+```python
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False # change this line to false
+```
+
+now just add, commit and push up to heroku. 
 
 Happy Coding! 
 
