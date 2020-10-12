@@ -136,6 +136,12 @@ heroku addons:create heroku-postgresql:hobby-dev
 
 Now you can git add and git commit.
 
+Final step before pushing up to heroku is to disable django's collect static functionality. 
+
+```bash
+heroku config:set DISABLE_COLLECTSTATIC=1
+```
+
 Once that is complete you can now push to Heroku! 
 
 ``` bash
