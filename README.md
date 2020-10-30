@@ -73,10 +73,10 @@ This will install the helper addons for heroku. Now we must add it into our proj
 Add to your settings.py 
 
 ```python
-//after import path
+# after import os
 import django_on_heroku
 
-//at the bottom of the file
+# at the bottom of the file
 django_on_heroku.settings(locals())
 ```
 Now to install Gunicorn and Whitenoise! 
