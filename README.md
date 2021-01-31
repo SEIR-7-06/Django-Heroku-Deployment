@@ -73,10 +73,10 @@ This will install the helper addons for heroku. Now we must add it into our proj
 Add to your settings.py 
 
 ```python
-//after import path
+# after from pathlib import Path
 import django_on_heroku
 
-//at the bottom of the file
+# at the bottom of the file
 django_on_heroku.settings(locals())
 ```
 Now to install Gunicorn and Whitenoise! 
@@ -135,12 +135,6 @@ heroku addons:create heroku-postgresql:hobby-dev
 ```
 
 Now you can git add and git commit.
-
-Final step before pushing up to heroku is to disable django's collect static functionality. 
-
-```bash
-heroku config:set DISABLE_COLLECTSTATIC=1
-```
 
 Once that is complete you can now push to Heroku! 
 
