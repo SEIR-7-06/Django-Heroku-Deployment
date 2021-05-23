@@ -34,7 +34,7 @@ When your project is ready for deployment here are the key steps you have to tak
 ### The Procfile 
 ___
 
-Create a file named Procfile in the root with the following info..
+Create a file named Procfile in the root of your project directory with the following info..
 
 ```
 web: gunicorn {name of your project folder}.wsgi
@@ -51,7 +51,7 @@ python3 -V
 ``` 
 this will give you your python version you are using for your project. 
 
-Create a runtime.txt in the project root folder with the following info about your python project.
+Create a runtime.txt in the root project directory with the following info about your python project.
 
 ```
 python-{your version number}
@@ -63,7 +63,7 @@ python-{your version number}
 ### Install Gunicorn and Django-On-Heroku
 ___
 
-In your project folder run the following..
+In your project folder, with the environment activated, run the following..
 
 ```
 $ pip3 install django-on-heroku
@@ -73,7 +73,7 @@ This will install the helper addons for heroku. Now we must add it into our proj
 Add to your settings.py 
 
 ```python
-# after from pathlib import Path
+# after "from pathlib import Path"
 import django_on_heroku
 
 # at the bottom of the file
