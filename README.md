@@ -34,8 +34,12 @@ When your project is ready for deployment here are the key steps you have to tak
 ### The Procfile 
 ___
 
-Create a file named `Procfile` (without a file extension) in the root of your project directory with the following info.
+Create a file named `Procfile` (without a file extension) in the root of your project directory.
+```bash
+touch Procfile
+```
 
+Include this code in your Procfile.
 ```
 web: gunicorn {name of your project folder}.wsgi
 ```
@@ -45,7 +49,7 @@ Replace the {} and the contents with the name of your project folder, for exampl
 web: gunicorn catcollector_project.wsgi
 ```
 
-### The Runtime.txt
+### The runtime.txt
 ___
 
 In terminal run..
@@ -55,7 +59,13 @@ python3 -V
 ``` 
 this will give you your python version you are using for your project. 
 
-Create a file called `runtime.txt` in the root project directory with the following info about your python project.
+Create a file called `runtime.txt`.
+```bash
+touch runtime.txt
+```
+
+In the root project directory with the following info about your python project.
+
 
 ```
 python-{your version number}
