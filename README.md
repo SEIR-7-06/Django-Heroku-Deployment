@@ -8,7 +8,7 @@
 
 Sign up for [Heroku](https://id.heroku.com/login)
 
-Install the [heroku cli](https://devcenter.heroku.com/articles/heroku-cli)
+Install the [heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
 Open terminal in your project and login to your account. 
 
@@ -34,12 +34,16 @@ When your project is ready for deployment here are the key steps you have to tak
 ### The Procfile 
 ___
 
-Create a file named Procfile in the root of your project directory with the following info..
+Create a file named `Procfile` (without a file extension) in the root of your project directory with the following info.
 
 ```
 web: gunicorn {name of your project folder}.wsgi
 ```
 
+Replace the {} and the contents with the name of your project folder, for example
+```
+web: gunicorn catcollector_project.wsgi
+```
 
 ### The Runtime.txt
 ___
@@ -51,7 +55,7 @@ python3 -V
 ``` 
 this will give you your python version you are using for your project. 
 
-Create a runtime.txt in the root project directory with the following info about your python project.
+Create a file called `runtime.txt` in the root project directory with the following info about your python project.
 
 ```
 python-{your version number}
