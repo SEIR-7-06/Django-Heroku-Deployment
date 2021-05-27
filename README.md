@@ -76,13 +76,20 @@ python-{your version number}
 
 ### Install Gunicorn and Django-On-Heroku
 ___
+Now to install a few necessary packages.
 
 In your project folder, with the environment activated, run the following..
 
+```bash
+pip3 install django-on-heroku
 ```
-$ pip3 install django-on-heroku
+```bash
+pip3 install gunicorn
+```
+```bash
+pip3 install whitenoise
+```
 
-```
 This will install the helper addons for heroku. Now we must add it into our project. 
 Add to your settings.py 
 
@@ -95,16 +102,6 @@ django_on_heroku.settings(locals())
 ```
 Now to install Gunicorn and Whitenoise! 
 
-```
-$ pip3 install gunicorn
-
-```
-
-Install Whitenoise 
-
-``` bash
-$ pip3 install whitenoise
-```
 
 ### Update requirements.txt
 ___
@@ -113,7 +110,6 @@ Update your existing Pipfile, or create a new Pipfile with the following command
 
 ```
 pip3 freeze > requirements.txt
-
 ```
 
 ### Git Add & Commit Changes
@@ -122,7 +118,6 @@ ___
 Add all Heroku config changes
 ```
 git add -A
-
 ```
 
 Commit changes
@@ -137,7 +132,6 @@ Inside your project folder run..
 
 ```
 heroku create [project name] --buildpack heroku/python
-
 ```
 This will take some time as heroku sets up your heroku remote git.
 
@@ -145,7 +139,6 @@ Once that is complete its time to add a Database to our heroku application.
 
 ``` bash
 heroku addons:create heroku-postgresql:hobby-dev
-
 ```
 
 Now you can git add and git commit.
@@ -153,8 +146,7 @@ Now you can git add and git commit.
 Once that is complete you can now push to Heroku! 
 
 ``` bash
-$ git push heroku master
-
+git push heroku master
 ```
 
 Once that is completed we need to migrate our database just as we would on our own devices.
@@ -162,35 +154,30 @@ Once that is completed we need to migrate our database just as we would on our o
 OPEN THE HEROKU CONSOLE
 
 ```
-$ heroku run bash
-
+heroku run bash
 ```
 
 INSIDE THE HEROKU CONSOLE RUN
 
 ```
-$ python3 manage.py makemigrations
-
+python3 manage.py makemigrations
 ```
 
 ```
-$ python3 manage.py migrate
-
+python3 manage.py migrate
 ```
 
 EXIT THE HEROKU CONSOLE
 
 ```
-$ exit
-
+exit
 ```
 
 And viola! Your Django application is officially online! You can run the following command to view it. 
 
 
 ``` bash
-$ heroku open
-
+heroku open
 ```
 
 Once you have tested your application and everything is lookging great it's time to turn off debug mode! 
