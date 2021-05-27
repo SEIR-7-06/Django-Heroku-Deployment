@@ -8,7 +8,7 @@
 
 Sign up for [Heroku](https://id.heroku.com/login)
 
-Install the [heroku toolbelt](https://devcenter.heroku.com/articles/heroku-cli)
+Install the [heroku cli](https://devcenter.heroku.com/articles/heroku-cli)
 
 Open terminal in your project and login to your account. 
 
