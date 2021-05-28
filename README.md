@@ -90,6 +90,15 @@ pip3 install gunicorn
 pip3 install whitenoise
 ```
 
+### Update requirements.txt
+___
+
+Update your existing requirements.txt file, or create a new requirements.txt file with the following command.
+
+```
+pip3 freeze > requirements.txt
+```
+
 This will install the helper addons for heroku. Now we must add it into our project. 
 Add to your settings.py 
 
@@ -102,15 +111,6 @@ django_on_heroku.settings(locals())
 ```
 Now to install Gunicorn and Whitenoise! 
 
-
-### Update requirements.txt
-___
-
-Update your existing Pipfile, or create a new Pipfile with the following command...
-
-```
-pip3 freeze > requirements.txt
-```
 
 ### Git Add & Commit Changes
 ___
